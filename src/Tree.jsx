@@ -161,7 +161,8 @@ const Tree = () => {
     return (
         <div style={{ textAlign: 'center' }}>
             <h2>Binary Tree Visualizer</h2>
-            <button onClick={handleBuildTree}>Build Tree</button>
+            <button onClick={handleBuildTree} style={{ marginLeft: '1rem', borderRadius: '0.25rem' }}>Build Tree</button>
+            {data.val ? <button onClick={() => postOrderTraversal(data)} style={{ marginLeft: '1rem', borderRadius: '0.25rem' }}>POST ORDER TRAVERSAL</button> : null}
             <div
                 style={{
                     border: '2px solid white',
@@ -178,7 +179,6 @@ const Tree = () => {
                     {stack && <Stackbuild />}
                 </div>
             </div>
-            {data.val ? <button onClick={() => postOrderTraversal(data)}>POST ORDER TRAVERSAL</button> : null}
         </div>
     );
 }
